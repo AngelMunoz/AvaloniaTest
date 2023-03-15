@@ -3,7 +3,6 @@ open Avalonia
 open Avalonia.Browser
 
 open AvaloniaTest
-open Elmish.Avalonia.AppBuilder
 
 module Program =
     [<assembly: SupportedOSPlatform("browser")>]
@@ -17,7 +16,6 @@ module Program =
     [<EntryPoint>]
     let main argv =
         buildAvaloniaApp()
-            .UseElmishBindings()
             .SetupBrowserApp("out")
             |> ignore
         0
